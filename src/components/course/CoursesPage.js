@@ -17,12 +17,12 @@ class CoursesPage extends React.Component {
 
     // this.onTitleChange = this.onTitleChange.bind(this);
     // this.onClickSave = this.onClickSave.bind(this);    
-    // this.redirectToAddCoursePage = this.redirectToAddCoursePage.bind(this);    
+    this.redirectToAddCoursePage = this.redirectToAddCoursePage.bind(this);    
   }
 
-  // redirectToAddCoursePage() {
-  //   browserHistory.push('/course');
-  // }
+  redirectToAddCoursePage() {
+    browserHistory.push('/course');
+  }
 
   // onTitleChange(event) {
   //     const course = this.state.course;
@@ -47,8 +47,8 @@ class CoursesPage extends React.Component {
         <h1>Courses</h1>
         {/*Move to CourseList.js
         {this.props.courses.map(this.courseRow)}*/}
-        <CourseList courses={this.props.courses}/>
         
+
         {/*<h2> Add Course</h2>
         <input 
             type="text"
@@ -59,12 +59,12 @@ class CoursesPage extends React.Component {
             type="submit"
             value="Save"
             onClick={this.onClickSave} />*/}
-        {/*<input type="submit"
+        <input type="submit"
                value="Add Course"
                className="btn btn-primary"
                onClick={this.redirectToAddCoursePage}/>
 
-        */}
+        <CourseList courses={this.props.courses}/>  
       </div>
     );
   }
